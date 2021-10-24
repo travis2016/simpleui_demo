@@ -10,7 +10,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_per_page = 20
 
 
-# @admin.register(Article)
-# class ArticleAdmin(admin.ModelAdmin):
-#     list_display = ('id', 'title', 'category', 'create_time')
-#     list_per_page = 20
+@admin.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'category', 'create_time')
+    list_per_page = 20

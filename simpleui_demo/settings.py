@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'article',
     'django.contrib.admindocs',
     'mdeditor',
-    'rate'
+    'interface_test',
+    # 'rate'
 ]
 
 MIDDLEWARE = [
