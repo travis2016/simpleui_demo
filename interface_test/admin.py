@@ -6,5 +6,5 @@ from interface_test.models import message
 
 @admin.register(message)
 class interfacemessage(admin.ModelAdmin):
-    list_display = ('id', 'interfacename','interfaced_esc', 'create_time')
+    list_display = ('id', 'interfacename','interface_desc', 'create_time')
     # list_per_page = 20
