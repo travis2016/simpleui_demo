@@ -18,6 +18,7 @@ from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from interface_test import views as interface_view
 
 admin.site.site_title = '志诚测试后台'
 admin.site.site_header = '志诚的测试后台'
@@ -27,4 +28,6 @@ urlpatterns = [
                   url(r'doc/', include('django.contrib.admindocs.urls'), name='doc'),
                   path('', admin.site.urls),
                   url(r'mdeditor/', include('mdeditor.urls')),
+                  #定义自己接口
+                  path('interface/vote/', interface_view.vote, name='vote'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
