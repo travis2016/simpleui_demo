@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def vote(request):
     return HttpResponse("You're voting on question")
+
+def home(request):
+    return render(request,"home.html")

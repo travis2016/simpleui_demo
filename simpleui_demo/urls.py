@@ -24,10 +24,11 @@ admin.site.site_title = '志诚测试后台'
 admin.site.site_header = '志诚的测试后台'
 
 urlpatterns = [
+                  # 定义自己接口
+                  path('interface/vote/', interface_view.vote, name='vote'),
+                  path('interface/home/', interface_view.home, name='home'),
                   # 配置admindoc
                   url(r'doc/', include('django.contrib.admindocs.urls'), name='doc'),
                   path('', admin.site.urls),
                   url(r'mdeditor/', include('mdeditor.urls')),
-                  #定义自己接口
-                  path('interface/vote/', interface_view.vote, name='vote'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
